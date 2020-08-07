@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Factory</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/styles.css">
-  </head>
-  <body>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <title> Dr Sneuss' Factory   </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="~/Css/styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header id="header" class=" d-flex align-items-center header-transparent">
+      <div class="container d-flex align-items-center">
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="index.html"><span></span></a></h1>
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+            <li><a href="#about">About</a></li>
+            <li>@Html.ActionLink("Engineers", "Index", "Engineers")</li>
+            <li>@Html.ActionLink("Machines", "Index", "Machines")</li>
+            <li><a href="#contact">Contact</a></li>
+  
+            <li class="bubble-nav text-center">@Html.ActionLink("Add new Engineer", "Create", "Engineers")</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     @RenderBody()
+    </div>
   </body>
 </html>
