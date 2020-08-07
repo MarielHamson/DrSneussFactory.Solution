@@ -2,7 +2,6 @@
   Layout = "_Layout";
 }
 
-@using CustomeHelper.CustomHelper
 @model Factory.Models.Engineer;
 
 <h2>Engineer Details</h2>
@@ -19,7 +18,7 @@ else
   <ul>
     @foreach(var join in Model.Machines)
     {
-      <li>@join.Machine.MachineName, In Operation?: @Html.YesNo(@join.Machine.IsTrue)</li>
+      <li>@join.Machine.MachineName</li>
     }
   </ul>
 }

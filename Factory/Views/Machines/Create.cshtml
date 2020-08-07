@@ -13,10 +13,6 @@
   @Html.Label("Assign Engineer to Repair")
   @Html.DropDownList("EngineerId")
 
-  @Html.Label("Is this Machine operational?") <br />
-  <p>Yes: @Html.RadioButtonFor(model => model.IsOperational, "True") </p>
-  <p>No: @Html.RadioButtonFor(model => model.IsOperational, "False")</p>
-
   <input type="submit" value="Add new Machine" class ="btn btn-default" />
 }
 

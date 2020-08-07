@@ -2,7 +2,6 @@
   Layout = "_Layout";
 }
 
-@using CustomeHelper.CustomHelper
 @using Factory.Models;
 @model List<Factory.Models.Machine>;
 
@@ -15,7 +14,7 @@
 
 @foreach (Machine machine in Model)
 {
-  <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId }) Machine Operational? : @Html.YesNo(machine.IsTrue)</li>
+  <li>@Html.ActionLink($"{machine.MachineName}", "Details", new { id = machine.MachineId })</li>
 }
 
 <p>@Html.ActionLink("Add new Machine", "Create")</p>

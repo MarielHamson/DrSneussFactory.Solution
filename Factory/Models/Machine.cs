@@ -13,8 +13,6 @@ namespace Factory.Models
     public int MachineId { get; set; }
     [DisplayName("Machine Name")]
     public string MachineName { get; set; }
-    public bool IsOperational { get; set; }
     public ICollection<EngineerMachine> Engineers { get; set; }
   }
-
 }
