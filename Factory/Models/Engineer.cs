@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Factory.Models
 {
@@ -10,6 +11,7 @@ namespace Factory.Models
     }
 
     public int EngineerId { get; set; }
+    [DisplayName("Engineer Name")]
     public string EngineerName { get; set; }
     public virtual ICollection<EngineerMachine> Machines { get; set; }
   }
