@@ -28,12 +28,12 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Machine machine, int EngineerId)
+    public ActionResult Create(Machine machine, int EngineerId, bool IsOperational)
     {
       _db.Machines.Add(machine);
       if (EngineerId != 0)
       {
-        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = EngineerId, MachineId = machine.MachineId });
+        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = EngineerId, MachineId = machine.MachineId, IsOperational = machine.IsOperational });
       }
       _db.SaveChanges();
       return RedirectToAction("Index");
