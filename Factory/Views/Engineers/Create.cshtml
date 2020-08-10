@@ -3,14 +3,17 @@
 }
 
 @model Factory.Models.Engineer
-<h4>Add a new Engineer</h4> <br>
+<h4>Add a new Engineer</h4> 
+
+<div id="form-1">
 @using (Html.BeginForm("Create", "Engineers", FormMethod.Post, new { @class = "forms form-group"}))
 {
-  <br>@Html.LabelFor(model => model.EngineerName)  
-  <br>@Html.TextBoxFor(model => model.EngineerName)
+ @Html.LabelFor(model => model.EngineerName)  
+ @Html.TextBoxFor(model => model.EngineerName)
   <input type="submit" value= "Add new engineer" />
 }
-<br>
+</div>
+
 <p>@Html.ActionLink("Show all Engineers", "Index")</p>
 <p>@Html.ActionLink("Show all Machines", "Index", "Machines")</p>
 <p>@Html.ActionLink("Back to Home", "Index", "Home")</p>

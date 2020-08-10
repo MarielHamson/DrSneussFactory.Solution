@@ -4,9 +4,9 @@
 
 @model Factory.Models.Machine
 
-<h2> Machine Details</h2>
+<h3> Machine Details</h3>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)</h3>
+<p>@Html.DisplayNameFor(model => model.MachineName): @Html.DisplayFor(model => model.MachineName)</p>
 
 @if(@Model.Engineers.Count ==0 )
 {
@@ -14,7 +14,7 @@
 }
 else 
 {
-  <h4>Engineers authorized to repair this machine: </h4>
+  <p>Engineers authorized to repair this machine: </p>
   <ul>
     @foreach(var join in Model.Engineers)
     {
